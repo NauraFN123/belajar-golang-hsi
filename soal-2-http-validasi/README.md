@@ -1,6 +1,6 @@
 # Soal 2: API Handler Sederhana - Validasi Data
 
-## Deskripsi
+## Deskripsi Program
 Program ini adalah server HTTP sederhana yang dibuat menggunakan package `net/http` bawaan Go. Server ini memiliki satu endpoint `/validate` yang berfungsi untuk memvalidasi data yang diterima melalui query parameter.
 
 **Ketentuan Validasi:**
