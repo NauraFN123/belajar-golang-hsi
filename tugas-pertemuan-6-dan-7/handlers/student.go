@@ -2,11 +2,19 @@ package handlers
 
 import (
 	"strconv"
-	"tugas-pertemuan-6/models"
+	"tugas-pertemuan-6-dan-7/models"
 
 	"github.com/gofiber/fiber/v2"
 )
 
+// @Summary      Get all students
+// @Description  Retrieves all student records from the system.
+// @Tags         students
+// @Security     BearerAuth
+// @Produce      json
+// @Success      200    {object}  models.Response{data=[]models.Student}
+// @Failure      500    {object}  models.Response
+// @Router       /students [get]
 func GetAllStudents(c *fiber.Ctx) error {
 	return c.Status(fiber.StatusOK).JSON(models.Response{
 		Success: true,
@@ -15,6 +23,16 @@ func GetAllStudents(c *fiber.Ctx) error {
 	})
 }
 
+// @Summary      Get student by ID
+// @Description  Retrieves a single student record by their ID.
+// @Tags         students
+// @Security     BearerAuth
+// @Produce      json
+// @Param        id   path      int  true  "Student ID"
+// @Success      200  {object}  models.Response{data=models.Student}
+// @Failure      400  {object}  models.Response
+// @Failure      404  {object}  models.Response
+// @Router       /students/{id} [get]
 func GetStudentByID(c *fiber.Ctx) error {
 	id, err := strconv.Atoi(c.Params("id"))
 	if err != nil {
@@ -40,6 +58,16 @@ func GetStudentByID(c *fiber.Ctx) error {
 	})
 }
 
+// @Summary      Create a new student
+// @Description  Creates a new student record in the system.
+// @Tags         students
+// @Security     BearerAuth
+// @Accept       json
+// @Produce      json
+// @Param        student  body      models.Student  true  "Student data"
+// @Success      201  {object}  models.Response{data=models.Student}
+// @Failure      400  {object}  models.Response
+// @Router       /students [post]
 func CreateStudent(c *fiber.Ctx) error {
 	var student models.Student
 	if err := c.BodyParser(&student); err != nil {

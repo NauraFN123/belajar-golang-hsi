@@ -1,12 +1,22 @@
 package handlers
 
 import (
-	"tugas-pertemuan-6/models"
-	"tugas-pertemuan-6/utils"
+	"tugas-pertemuan-6-dan-7/models"
+	"tugas-pertemuan-6-dan-7/utils"
 
 	"github.com/gofiber/fiber/v2"
 )
 
+// @Summary      Login user
+// @Description  Logs in a user and returns a JWT token.
+// @Tags         auth
+// @Accept       json
+// @Produce      json
+// @Param        login  body      models.LoginPayload  true  "User login credentials"
+// @Success      200    {object}  models.Response{data=string}
+// @Failure      400    {object}  models.Response
+// @Failure      401    {object}  models.Response
+// @Router       /auth/login [post]
 func Login(c *fiber.Ctx) error {
 	var payload models.LoginPayload
 	if err := c.BodyParser(&payload); err != nil {

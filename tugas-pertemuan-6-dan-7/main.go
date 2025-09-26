@@ -9,12 +9,21 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/recover"
 	"github.com/gofiber/swagger"
 
-	_ "tugas-pertemuan-6/docs"
+	_ "tugas-pertemuan-6-dan-7/docs"
 
-	"tugas-pertemuan-6/handlers"
-	"tugas-pertemuan-6/middleware"
+	"tugas-pertemuan-6-dan-7/handlers"
+	"tugas-pertemuan-6-dan-7/middleware"
 )
 
+// @title           Student Management API
+// @version         1.0
+// @description     A REST API for a student management system using Golang and Fiber.
+// @host      localhost:3000
+// @BasePath  /api
+// @securityDefinitions.apiKey  BearerAuth
+// @in                          header
+// @name                        Authorization
+// @description               Type "Bearer" followed by a space and the JWT token.
 func main() {
 	app := fiber.New()
 

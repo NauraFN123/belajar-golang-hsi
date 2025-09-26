@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"tugas-pertemuan-6/models"
+	"tugas-pertemuan-6-dan-7/models"
 
 	"github.com/gofiber/fiber/v2"
 )

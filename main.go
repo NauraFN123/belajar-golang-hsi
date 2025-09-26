@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
-	"tugas-pertemuan-4/config"
-	"tugas-pertemuan-4/models"
-	"tugas-pertemuan-4/worker"
+	"tugas-pertemuan-6-dan-7/config"
+	"tugas-pertemuan-6-dan-7/models"
+	"tugas-pertemuan-6-dan-7/worker"
 )
 
 func main() {
