@@ -1,3 +1,0 @@
- Go Version: go1.24.4 windows/amd64
- Git Version: 2.50.0.windows.2 
- OS yang digunakan: Windows 

@@ -1,6 +1,6 @@
-# Tugas Golang Pertemuan 4 – Worker & Manajemen Nilai Mahasiswa
+# 🧩 Tugas Golang Pertemuan 4 – Worker & Manajemen Nilai Mahasiswa
 
-## Deskripsi
+## 📌 Deskripsi
 
 Program ini mensimulasikan sistem penugasan dan penilaian mahasiswa menggunakan:
 
@@ -13,10 +13,9 @@ Program ini mensimulasikan sistem penugasan dan penilaian mahasiswa menggunakan:
 
 ---
 
-
 ---
 
-## Cara Menjalankan
+## 🚀 Cara Menjalankan
 
 ### 1. Siapkan Database PostgreSQL
 - Bisa lewat Docker, atau install manual
@@ -26,3 +25,4 @@ Program ini mensimulasikan sistem penugasan dan penilaian mahasiswa menggunakan:
 
 ```bash
 go run cmd/main.go
+
